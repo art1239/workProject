@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 19px;
+}
+div{
+    display:flex;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+height: 70px;
+opacity: 0.9;
+}
+
+img{
+    width:100px;
+    height:55px;
+    display: block;
+   
+}
+
+ul li{
+    display: inline-block;
+    margin-right: 80px ;
+   
+}
+ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+.upload{
+    padding-left:25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:teal;
+  border-radius:9% ;
+  color:white;
+  text-decoration: none;
+
+}

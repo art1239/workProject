@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="collectData()">
+  
+      <label for="mName">Movie Name</label>
+      <input type="text" id="fname" name="movieTitle" formControlName="movieTitle" placeholder="Movie Title.">
+      <label >Moive Stars</label>
+      <div class="select">
+        <select name="format" formControlName="numberOfStars" id="format">
+           <option selected disabled>Choose the number of stars</option>
+           <option value="1">1-Star</option>
+           <option value="2">2-Stars</option>
+           <option value="3">3-Stars</option>
+           <option value="4">4-Stars</option>
+           <option value="5">5-Stars</option>
+        </select>
+     </div>
+
+      <label >Date air/aired</label>
+      <input type="date" id="lname"formControlName="dateAired" name="lastname" placeholder="Number Of Stars..">
+
+   
+  
+      <label for="subject">Description</label>
+      <textarea id="subject" name="subject" formControlName="description" placeholder="Write something.." style="height:100px"></textarea>
+      <label >Image</label>
+      <input class="chf" type="file" accept ='images/*' formControlName="image"  (change)=showImage($event)>
+      <button type="submit" value="Submit">Upload</button>
+   
+  
+    </form>
+  </div>
+  <img [src]='imgSrc' style="width:700px;
+  height:560px;display: block;">

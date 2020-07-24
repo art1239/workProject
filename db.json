@@ -1,0 +1,12 @@
+{
+  "movies": [
+    {
+      "movieTitle": "Avatar",
+      "dateAired": "2020-07-14",
+      "numberOfStars": "3",
+      "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      "image": "C:\\fakepath\\avatar.jpg",
+      "id": 1
+    }
+  ]
+}
