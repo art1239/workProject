@@ -1,8 +1,11 @@
+*{
+  box-sizing: border-box;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 600px;
-    height:400px;
-    margin: 90px 30px;
+    width: 650px;
+    height:620px;
+    margin: 50px 30px;
     text-align: center;
     font-family: arial;
     box-sizing: border-box;
@@ -10,7 +13,15 @@
     position: relative;
     float:left;
   }
-  
+ .desc{
+   line-height: 30px;
+   word-spacing: 1px;
+   word-wrap: break-word;
+   text-indent: 20px;
+   text-overflow: clip;
+   
+   
+ }
   .price {
     color: grey;
     font-size: 22px;
@@ -73,7 +84,7 @@
     width:500px;
     height: 520px;
     float: left;
-    margin: 40px 20px;
+    margin: 90px 20px;
     
   }
   input[type="file"]{
@@ -128,4 +139,8 @@ border: none;
  }
  .select:hover::after {
     color: crimson;
+ }
+ .str{
+   width:85px;
+   color:gold;
  }

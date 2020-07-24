@@ -21,7 +21,8 @@ export class MovieServiceService {
 
   fetchData(){
   
-    return this.http.get<Movie[]>(this.url).pipe(map(res=>{let results=res.map(item=>item.image=item.image.replace("C:\\fakepath\\","../assets/images/"))
+    return this.http.get<Movie[]>(this.url).pipe(map(res=>
+      {let results=res.map(item=>item.image=item.image.replace("C:\\fakepath\\","../assets/images/"))
     return res;
     
     })
@@ -39,4 +40,22 @@ export class MovieServiceService {
     const url=this.url +'/' +id;
     return this.http.delete(url);
   }
+  
+  fetchDataFromOneRecord(id:any){
+    const url=this.url +'/' +id;
+  
+     return this.http.get<Movie>(url);
+      
+    
+    
+    }
+
+    updateData(id:any,value){
+      const url=this.url+'/'+id;
+    
+       return this.http.put<Movie>(url,value);
+        
+      
+      
+      }
 }

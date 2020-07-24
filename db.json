@@ -1,12 +1,20 @@
 {
   "movies": [
     {
+      "movieTitle": "The Irish Man",
+      "numberOfStars": "5",
+      "dateAired": "",
+      "description": "",
+      "image": "../assets/images/irishman.jpg",
+      "id": 2
+    },
+    {
       "movieTitle": "Avatar",
-      "dateAired": "2020-07-14",
-      "numberOfStars": "3",
-      "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      "dateAired": "2020-07-09",
+      "numberOfStars": "1",
+      "description": "zdsgdgsg",
       "image": "C:\\fakepath\\avatar.jpg",
-      "id": 1
+      "id": 3
     }
   ]
 }

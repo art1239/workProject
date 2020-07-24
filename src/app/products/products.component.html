@@ -7,10 +7,12 @@
         <i *ngIf="movie.numberOfStars >= 4 "class="fa fa-star str" ></i>
         <i *ngIf="movie.numberOfStars >= 5 "class="fa fa-star str" ></i> </li>
      <li class="image"><img src="{{movie.image}}"> </li>
-      <li class="grey"><a routerLink='/product/movie.id}}' class="button">Update</a> <a (click)="removeMovie(movie.id)" class="button-dlt">Delete</a></li>
+      <li class="grey"><a routerLink='/product/{{movie.id}}' class="button">Update</a> <a (click)="removeMovie(movie.id)" class="button-dlt">Delete</a></li>
     
     </ul>
+ 
   </div>
-
+  
+  <input type='text' placeholder="SearchByName" class='searchbar'[(ngModel)]='movieName' (input)='searchByName()'>
 
 

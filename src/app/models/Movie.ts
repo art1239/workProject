@@ -1,6 +1,6 @@
 export class Movie{
      public id:number;
-     name:String;
+     movieTitle:String;
      numberOfStars:number;
      image:String;
      description:String;

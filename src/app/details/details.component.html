@@ -1,18 +1,23 @@
 <div class="card">
-    <img  alt="Denim Jeans" style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans..</p>
-    <p class="button">Add to Cart</p>
+    <img  [src]="imgSrc"  style="width:170px;height:240px">
+    <h1>{{title}}</h1>
+    <p class="price">{{date}}</p>
+    <p class='desc'>{{desc}}</p>
+    <p class="button">
+        <i *ngIf="numberOfStars >= 1 "class="fa fa-star str" ></i>
+        <i *ngIf="numberOfStars >= 2 "class="fa fa-star str" ></i>
+        <i *ngIf="numberOfStars >= 3 "class="fa fa-star str" ></i>
+        <i *ngIf="numberOfStars >= 4 "class="fa fa-star str" ></i>
+        <i *ngIf="numberOfStars >= 5 "class="fa fa-star str" ></i>
   </div>
   <div class="container">
-    <form [FormGroup]="myForm" >
+    <form [formGroup]="myForm" (ngSubmit)="collectData()" >
   
       <label for="mName">Movie Name</label>
-      <input type="text" id="fname" name="movieTitle" formControlName="movieTitle" placeholder="Movie Title.">
+      <input type="text"  id="fname" [(ngModel)]="title" name="movieTitle" formControlName="movieTitle" placeholder="Movie Title.">
       <label >Moive Stars</label>
       <div class="select">
-        <select name="format" formControlName="numberOfStars" id="format">
+        <select name="format"  [(ngModel)]="numberOfStars" formControlName="numberOfStars" id="format">
            <option selected disabled>Choose the number of stars</option>
            <option value="1">1-Star</option>
            <option value="2">2-Stars</option>
@@ -23,14 +28,14 @@
      </div>
 
       <label >Date air/aired</label>
-      <input type="date" id="lname"formControlName="dateAired" name="lastname" placeholder="Number Of Stars..">
+      <input type="date" [(ngModel)]="date" id="lname"formControlName="dateAired" name="lastname" placeholder="Number Of Stars..">
 
-   
   
+       
       <label for="subject">Description</label>
-      <textarea id="subject" name="subject" formControlName="description" placeholder="Write something.." style="height:100px"></textarea>
+      <textarea id="subject" [(ngModel)]="desc" formControlName="description" placeholder="Write something.." style="height:100px"></textarea>
       <label >Image</label>
-      <input class="chf" type="file" accept ='images/*' formControlName="image" >
+      <input class="chf" type="file" (change)=showImage($event) accept ='images/*' formControlName="image" >
       <button type="submit" value="Submit">Upload</button>
    
   

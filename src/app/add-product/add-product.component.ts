@@ -21,14 +21,14 @@ export class AddProductComponent implements OnInit {
 
     this.fetching.postData(this.myForm.value).subscribe((result=>{
       alert("Sukses");
-      this.myForm.reset;
+      this.myForm.reset();
     }));
    
   }
   constructor(private fetching:MovieServiceService) { }
 
   ngOnInit(): void {
- 
+
   }
 
   
@@ -41,6 +41,7 @@ this.imgSrc=event.target.files[0];
 
 
   }
+ 
 
  
 

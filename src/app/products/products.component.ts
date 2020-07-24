@@ -11,40 +11,30 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
    movies:Movie[];
     modifiedArray:Movie[];
+    movieName:string;
+  
  
   constructor(private fetching:MovieServiceService ) { }
 
   ngOnInit(): void {
-  
-    
- this.fetching.fetchData().subscribe(result=>{
+this.fetching.fetchData().subscribe(result=>{this.movies=result})}
 
- this.movies=result}
- );
-
-                
-  }
-
-
- 
-  removeMovie(id:number){
- const a= this.movies.filter(movie=> 
-   
-    id!==movie.id);
+removeMovie(id:number){
+ const a= this.movies.filter(movie=>id!==movie.id);
     this.movies=a;
-  
-
- 
-  
- this.fetching.deleteMovie(id).subscribe((result)=>{
+this.fetching.deleteMovie(id).subscribe((result)=>{
 console.log('deleted');
   });
-  
-
- 
-  }
-  
+}
+searchByName(){
+   if(this.movieName!==''){
+   this.movies= this.movies.filter(movie=>{
+      return movie.movieTitle.toLocaleLowerCase().match(this.movieName.toLocaleLowerCase());
+  })}
+   else if(this.movieName===''){
+this.ngOnInit();
 }
   
-
+ }
+}
 
